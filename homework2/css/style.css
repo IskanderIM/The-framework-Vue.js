@@ -1,0 +1,314 @@
+
+
+.dm-serif-display-regular {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .dm-serif-display-regular-italic {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  /* .jost-<uniquifier> {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+body {
+    background-image: url('../img/Background.svg');
+    background-size: cover;
+    font-family: "Jost", sans-serif;
+    font-size: 22px;
+    margin: 0;
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+li {
+    list-style-type: none;
+}
+.bg-white {
+    background-color: #FFFFFF !important;
+}
+.bg-beige {
+    background-color: #F4F0EC !important;
+}
+.header {
+    display: flex;
+    justify-content: space-around;
+}
+.card {
+    position: relative;
+}
+.header__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 1200px;
+    margin: 40px 0px 52px;
+}
+.home-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;    
+}
+.home-link-title {
+    font-family: "DM Serif Display";
+    font-weight: 400;
+    font-size: 40px;
+}
+.home-link-logo {
+    height: 33px;
+}
+.navbar-list {
+    display: flex;
+    gap: 50px;
+    font-size: 20px;
+}
+.banner__section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 96px;
+}
+.banner-card__img {
+    border-radius: 70px;
+}
+.card-img-overlay {
+    position: absolute;
+    top: 208px;
+    left: 52px;
+}
+.title {
+    font-family: "DM Serif Display", sans-serif;
+    font-style: normal;
+    color: #292F36;
+    line-height: 125%;
+    letter-spacing: 3px;
+}
+.title__banner {
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
+    line-height: 125%;
+    letter-spacing: 0;
+}
+.subtitle {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 22px;
+    color: #4D5053;
+    line-height: 150%;
+    letter-spacing: 1px;
+}
+.subtitle__banner {
+    margin: 18px 0px 21px 0px;
+}
+.banner__button {
+    background-color: #292F36;
+    padding: 26px 48px;
+    color: #FFFFFF;
+    border-radius: 18px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.projects__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.projects__title {
+    text-align: center;
+    font-size: 50px;
+    line-height: 125%;
+    letter-spacing: 3px;
+}
+.projects__subtitle {
+    text-align: center;
+    font-size: 22px;
+    margin: 8px 0px 93px;
+    line-height: 150%;
+    letter-spacing: 1px;
+}
+.projects__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+}
+.card-body {
+    display: flex;
+    align-items: center;
+    margin-bottom: 56px;
+    justify-content: space-between;
+}
+.card-img-top {
+    margin-bottom: 34px;
+}
+.card-img-one {
+    border-radius: 0 80px 0 0;
+}
+.card-img-two {
+    border-radius: 80px 0 0 0;
+}
+.card-img-three {
+    border-radius: 0 0 80px 0;
+}
+.card-img-four {
+    border-radius: 0 0 0 80px;
+}
+.card-title {
+    font-size: 25px;
+}
+.card__btn_dark-big {
+    display: flex;
+    color: #292F36;
+    background-color: #f4f0ec;
+    border-radius: 50px;
+    height: 70px;
+    width: 70px;
+    align-items: center;
+    justify-content: center;
+}
+.counter__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F0EC;
+    padding: 150px;
+    margin-top: 40px;
+}
+.counter__line {
+    height: 130px;
+    border-right: 1px solid #CDA274;
+}
+.counter__column {
+    width: 300px;
+    text-align: center;
+}
+.item-counter__number {
+    font-family: "DM Serif Display", serif;
+    font-style: normal;
+    color: #CDA274;
+    line-height: 125%;
+    letter-spacing: 3px;
+    font-size: 85px;
+    margin-bottom: 16px;
+}
+.item-counter__text {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 22px;
+    color: #4D5053;
+    line-height: 150%;
+    letter-spacing: 1px;
+}
+.blog__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 96px 0 33px 0;
+}
+.title__blog {
+    text-align: center;
+    font-size: 50px;
+    line-height: 125%;
+    letter-spacing: 3px;
+}
+.blog {
+    display: flex;
+    max-width: 1200px;
+    margin-top: 52px;
+    margin-bottom: 33px;
+    gap: 27px;
+}
+.subtitle__blog {
+    text-align: center;
+}
+.text-over-image {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    background-color: #FFFFFF;
+    color: #4D5053;
+    border-radius: 8px 8px 8px 0;
+    padding: 6px;
+}
+.blog__card {
+    padding: 21px;
+    border: 1px solid #E7E7E7;
+    border-radius: 62px;
+}
+.blog-card-title {
+    font-size: 25px;
+    color: #292F36;
+    margin-bottom: 30px;
+}
+.card-img-top__blog {
+    position: relative;
+    margin-bottom: 21px;
+}
+.img__blog {
+    border-radius: 41px 41px 0 0;
+}
+.card-body__blog {
+
+}
+.blog-card__subtitle {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card__btn_dark-small {
+    width: 52px;
+    height: 52px;
+}
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 87px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 1200px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.footer-column__title {
+    font-size: 25px;
+}
+.footer__social-networks {
+    display: flex;
+    gap: 54px;
+}
+
+.blog__card-img-overlay {
+    position: absolute;
+    background-color: #FFFFFF;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding: 41px 78px;
+    border-radius: 37px 37px 0 0;
+}
+.blog__banner__section {
+    margin-bottom: 200px;
+}
