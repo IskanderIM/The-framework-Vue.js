@@ -36,6 +36,9 @@ a {
 li {
     list-style-type: none;
 }
+.text-start {
+    text-align: left !important;
+}
 .bg-white {
     background-color: #FFFFFF !important;
 }
@@ -92,7 +95,7 @@ li {
     font-style: normal;
     color: #292F36;
     line-height: 125%;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 .title__banner {
     font-size: 65px;
@@ -132,7 +135,7 @@ li {
     text-align: center;
     font-size: 50px;
     line-height: 125%;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 .projects__subtitle {
     text-align: center;
@@ -202,7 +205,7 @@ li {
     font-style: normal;
     color: #CDA274;
     line-height: 125%;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     font-size: 85px;
     margin-bottom: 16px;
 }
@@ -220,12 +223,13 @@ li {
     flex-direction: column;
     align-items: center;
     margin: 96px 0 33px 0;
+    flex-wrap: wrap;
 }
 .title__blog {
     text-align: center;
     font-size: 50px;
     line-height: 125%;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 .blog {
     display: flex;
@@ -233,6 +237,7 @@ li {
     margin-top: 52px;
     margin-bottom: 33px;
     gap: 27px;
+    flex-wrap: wrap;
 }
 .subtitle__blog {
     text-align: center;
@@ -250,11 +255,15 @@ li {
     padding: 21px;
     border: 1px solid #E7E7E7;
     border-radius: 62px;
+
+    width: 382px;
 }
 .blog-card-title {
     font-size: 25px;
     color: #292F36;
     margin-bottom: 30px;
+    line-height: 125%;
+    letter-spacing: 2px;
 }
 .card-img-top__blog {
     position: relative;
@@ -311,4 +320,58 @@ li {
 }
 .blog__banner__section {
     margin-bottom: 200px;
+}
+.last-post__section {
+    display: flex;
+    justify-content: space-around;
+}
+.last-post {
+    max-width: 1200px;
+}
+.last-post__title {
+    text-align: justify;
+    margin-bottom: 27px;
+}
+.last-post__card {
+    padding: 22px;
+    border-radius: 62px;
+    border: 1px solid #E7E7E7;
+    gap: 65px;
+}
+.last-post__card-img-top__img-blog {
+    min-width: 569px;
+    border-radius: 50px;
+}
+.card-body__blog p {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 22px;
+    color: #4D5053;
+    line-height: 150%;
+    letter-spacing: 1px;
+
+    padding-right: 54px;
+}
+.card-body__blog h5 {
+    padding-right: 54px;
+}
+.last-post__blog-card__subtitle {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 41px;
+    padding-right: 34px;
+}
+.last-post__blog-card__subtitle p {
+    font-size: 16px;
+}
+.last-post__card-img-top {
+    display: flex;
+    align-items: center;
+}
+.blog-script__title {
+    min-width: 1200px;
 }
