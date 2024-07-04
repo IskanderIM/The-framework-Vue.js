@@ -39,5 +39,6 @@ new Vue({
                 articleDate: '2022-12-25',
             },
         ],
+        switchButtons: ['01', '02', '03', '04']
     }
 });
