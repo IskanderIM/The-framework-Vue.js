@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interno</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,53 +37,17 @@
     </section>
     <section class="blog-details__articles-section">
         <div class="blog-details__articles">
-            <article class="col-9">
-                <header class="title">
-                    <h2>Создадим лучший макет перепланировки</h2>
-                </header>
-                <article>
-                    <img src="img/Blog-details/blog-details-content-1.jpg" alt="">
-                    <div class="subtitle last-post__blog-card__subtitle">
-                        <p>26 Декабрь, 2022</p>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Интерьер</a></li>
-                            <li class="breadcrumb-item"><a href="#">Домой</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Декор</li>
-                            </ol>
-                        </nav>
-                    </div>
-                    <p>В своей статье от 1994-го года журнал «Before & After» отследил фразу «Lorem ipsum ...» до философского трактата Цицерона О пределах добра и зла, написанного в 45 году до нашей эры на латинском языке. 
-                        В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»
-                    </p>      
-                </article>
-                <article class="quotes">
-                    <h2>“</h2>
-                    <p>Какая-то умная и красивая цитата</p>
-                </article>
-                <article>
-                    <header class="title">
-                        <h2>Design sprints are great</h2>
-                    </header>
-                    <p>В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»</p>
-                    <ol>
-                        <li>С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.</li>
-                        <li>С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.</li>
-                        <li>С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.</li>
-                    </ol>
-                    <img src="img/Blog-details/blog-details-content-2.jpg" alt="">
-                </article>
-            </article>
+            <article class="col-8">        
+            	<component :is="changeTabs"></component>
+            </article> 
     
-            <aside class="col-3">
-                <h2>Тэги</h2>
-                <nav>
-                    <button>Кухня</button>
-                    <button>Спальня</button>
-                    <button>Здание</button>
-                    <button>Архитектура</button>
-                    <button>Планировка</button>
-                    <button>Спальня</button>
+            <aside class="blog-details__sidebar col-4">
+                <h2 class="navbar-title">Тэги</h2>
+                <nav class="blog-details__navbar">
+                    <button class="btn-navigation-tag tabs-btn" v-for="tab in tabs" :key="tab.id" :name="tab.name" @click="currentTab = tab.name" :class="{ 'active': currentTab === tab.name }">
+                        {{ tab.title }}
+                    </button>
+                    
                 </nav>
             </aside>
         </div>        
@@ -126,6 +90,27 @@
     </footer>
     <script src="https://kit.fontawesome.com/552f7a0d6f.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
-    <script src="./js/blog-script.js"></script>
+    <script src=".\js\blog-details-script.js"></script>
+    <script>
+        new Vue({
+            el: '.blog-details__articles-section',
+            data: {                
+                tabs: [
+                    {id: 1, title: 'Кухня', name: 'kitchen'},
+                    {id: 2, title: 'Спальня', name: 'bedroom'},
+                    {id: 3, title: 'Здание', name: 'building'},
+                    {id: 4, title: 'Архитектура', name: 'architecture'},
+                    {id: 5, title: 'Планировка', name: 'layout'}
+                ],
+                currentTab: 'kitchen',
+            },
+            computed: {
+                changeTabs() {
+                  return `change-${this.currentTab}`;
+                },
+                
+            },
+        })
+    </script>
 </body>
 </html>
