@@ -1,16 +1,16 @@
 <template>
-  <body>
+  <div>
     <header class="header">
         <div class="header__body">
-            <a href="index.html" class="home-link">
+            <router-link to="home" href="index.html" class="home-link">
                 <img class="home-link-logo" src="../assets/img/Logo.svg" alt="Interno">
                 <h1 class="home-link-title">Interno</h1>
-            </a>
+            </router-link>
             <nav class="navbar">
                     <ul class="navbar-list">
-                        <li><a href="index.html">Домой</a></li>
-                        <li><a href="">Проект</a></li>
-                        <li><a href="blog.html">Блог</a></li>
+                        <li><router-link to="home">Домой</router-link></li>
+                        <li><router-link href="">Проект</router-link></li>
+                        <li><router-link to="blog">Блог</router-link></li>
                     </ul>
             </nav>
         </div>
@@ -260,7 +260,7 @@
             </div>
         </div>
     </footer>
-</body>
+</div>
 </template>
 
 <script src="https://kit.fontawesome.com/552f7a0d6f.js" crossorigin="anonymous"></script>
