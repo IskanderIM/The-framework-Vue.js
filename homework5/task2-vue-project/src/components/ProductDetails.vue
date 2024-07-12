@@ -8,7 +8,7 @@
         <p v-if="item.available === true">Available</p>
         <p v-else>Out of stock</p>
           <span>Пересчитать цену</span>
-        <select @change="toggleDescription(item.id, item)" v-model="item.selected">
+        <select @change="formattedPrice(item.id, item)" v-model="item.selected">
           <option>₽</option>
           <option>$</option>
           <option>€</option>
@@ -59,7 +59,7 @@ export default {
   },
 
   methods: {
-    toggleDescription (id, item) {
+    formattedPrice (id, item) {
       // console.log(id)
       // console.log(item)
       // console.log(item.price)
@@ -76,30 +76,6 @@ export default {
       } else if (id || item.selected === '€') {
         item.result = 0
         item.result = Number(item.price) * Number(95.10)
-      }
-    },
-    ruble () {
-      console.log(this)
-      console.log(this.selected)
-      this.result = Number(this.$parent.item.price)
-    },
-    dollar () {
-      this.result = Number(this.item.price) * Number(87.51)
-    },
-    euro () {
-      this.result = Number(this.price) * Number(95.10)
-    },
-    formattedPrice (selected = '₽') {
-      switch (selected) {
-        case '₽':
-          this.ruble()
-          break
-        case '$':
-          this.dollar()
-          break
-        case '€':
-          this.euro()
-          break
       }
     }
   }
