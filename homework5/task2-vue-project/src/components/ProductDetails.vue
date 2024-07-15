@@ -9,12 +9,13 @@
         <p v-else>Out of stock</p>
           <span>Пересчитать цену</span>
         <select @change="formattedPrice(item.id, item)" v-model="item.selected">
-          <option>₽</option>
+          <option selected>₽</option>
           <option>$</option>
           <option>€</option>
         </select>
-        <!-- <p>{{ item.result }}</p>
-        <p>{{ item.selected }}</p> -->
+        <p>{{ item.result }}</p>
+        <p>{{ item.selected }}</p>
+        <p>{{ formattedPrice }}</p>
       </li>
     </ul>
   </div>
@@ -59,25 +60,33 @@ export default {
   },
 
   methods: {
-    formattedPrice (id, item) {
+    formattedPrice (item) {
       // console.log(id)
       // console.log(item)
       // console.log(item.price)
       // console.log(item.selected)
-      item.result = 0
-      if (id || item.selected === '₽') {
-        item.result = 0
-        item.result = Number(item.price)
-        console.log(item.result)
-      } else if (id || item.selected === '$') {
-        item.result = 0
-        item.result = Number(item.price) * Number(87.51)
-        console.log(item.result)
-      } else if (id || item.selected === '€') {
-        item.result = 0
-        item.result = Number(item.price) * Number(95.10)
-      }
+      // item.result = 0
+      this.$nextTick(function () {
+        if (item.id || item.selected === '₽') {
+          // item.result = 0
+          item.result = Number(item.price)
+          // console.log(item.result)
+        } else if (item.id || item.selected === '$') {
+          // item.result = 0
+          item.result = Number(item.price) * Number(87.51)
+          // console.log(item.result)
+        } else if (item.id || item.selected === '€') {
+          // item.result = 0
+          item.result = Number(item.price) * Number(95.10)
+        }
+      })
     }
   }
+
+  // computed: {
+  //   priceCount () {
+  //     return this.formattedPrice(this.item)
+  //   }
+  // }
 }
 </script>
