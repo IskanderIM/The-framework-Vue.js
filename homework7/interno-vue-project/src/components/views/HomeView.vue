@@ -61,7 +61,7 @@
                     class="project__contnet_block-link"
                   >
                     <img
-                      src="../assets/img/logos/_toRight.svg"
+                      src="../../assets/img/logos/_toRight.svg"
                       alt="Go"
                       class="project__content_block-imgButton"
                     >
@@ -86,7 +86,7 @@
                     class="project__contnet_block-link"
                   >
                     <img
-                      src="../assets/img/logos/_toRight.svg"
+                      src="../../assets/img/logos/_toRight.svg"
                       alt="Go"
                       class="project__content_block-imgButton"
                     >
@@ -113,7 +113,7 @@
                     class="project__contnet_block-link"
                   >
                     <img
-                      src="../assets/img/logos/_toRight.svg"
+                      src="../../assets/img/logos/_toRight.svg"
                       alt="Go"
                       class="project__content_block-imgButton"
                     >
@@ -138,7 +138,7 @@
                     class="project__contnet_block-link"
                   >
                     <img
-                      src="../assets/img/logos/_toRight.svg"
+                      src="../../assets/img/logos/_toRight.svg"
                       alt="Go"
                       class="project__content_block-imgButton"
                     >

@@ -1,37 +1,37 @@
 <template>
   <div>
     <div class="container">
-      <div class="blogpage__banner">
-        <div class="blogpage__banner-into">
-          <h1 class="blogpage__banner-intoHead">
+      <div class="project-page__banner">
+        <div class="project-page__banner-into">
+          <h1 class="project-page__banner-intoHead">
             Статьи & Новости
           </h1>
-          <div class="blogpage__banner-breadcrumbs">
+          <div class="project-page__banner-breadcrumbs">
             Домой / Блог
           </div>
         </div>
       </div>
     </div>
     <div class="container">
-      <div class="blogpage">
-        <div class="blogpage__latestPost">
-          <div class="blogpage__heading-title">
+      <div class="project-page">
+        <div class="project-page__latestPost">
+          <div class="project-page__heading-title">
             Последний пост
           </div>
-          <div class="blogpage__latestPost-card">
-            <div class="blogpage__latestPost-post">
-              <div class="blogpage__latestPost-img" />
-              <div class="blogpage__latestPost-content">
-                <div class="blogpage__latestPost-subcontent">
-                  <div class="blogpage__latestPost-title">
+          <div class="project-page__latestPost-card">
+            <div class="project-page__latestPost-post">
+              <div class="project-page__latestPost-img" />
+              <div class="project-page__latestPost-content">
+                <div class="project-page__latestPost-subcontent">
+                  <div class="project-page__latestPost-title">
                     Low Cost Latest Invented Interior Designing Ideas
                   </div>
-                  <div class="blogpage__latestPost-text">
+                  <div class="project-page__latestPost-text">
                     С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов. Перед появлением электронных издательств дизайнеры импровизировали в работе над макетами, изображая текст при помощи волнистых линий. С появлением самоклеющихся наклеек с напечатанным текстом «Lorem ipsum» появился более реалистичный способ обозначения расположения текста на странице.
                   </div>
                 </div>
-                <div class="blogpage__latestPost-date">
-                  <div class="blogpage__latestPost-date_text">
+                <div class="project-page__latestPost-date">
+                  <div class="project-page__latestPost-date_text">
                     26 December,2022
                   </div>
                   <router-link
@@ -67,8 +67,8 @@
           </div>
         </div>
       </div>
-      <div class="blogpage__artcle-and-news">
-        <div class="blog blogpage__blog">
+      <div class="project-page__artcle-and-news">
+        <div class="blog project-page__blog">
           <div class="blog__heading">
             <div class="blog__heading-title">
               Статьи & Новости
@@ -82,17 +82,17 @@
             <!-- <BlogDetails /> -->
           </div>
         </div>
-        <div class="blogpage__pagination">
-          <div class="blogpage__pagination-page">
+        <div class="project-page__pagination">
+          <div class="project-page__pagination-page">
             01
           </div>
-          <div class="blogpage__pagination-page">
+          <div class="project-page__pagination-page">
             02
           </div>
-          <div class="blogpage__pagination-page">
+          <div class="project-page__pagination-page">
             03
           </div>
-          <div class="blogpage__pagination-page">
+          <div class="project-page__pagination-page">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="53"
@@ -123,9 +123,9 @@
 
 <script>
 // import BlogDetails from '@/components/blocks/BlogDetails.vue'
-import ArtAndNews from '../components/blocks/ArtAndNews.vue'
+import ArtAndNews from '../blocks/ArtAndNews.vue'
 export default {
-  name: 'BlogView',
+  name: 'ProjectView',
   components: {
     ArtAndNews
     // BlogDetails

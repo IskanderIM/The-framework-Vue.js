@@ -3,16 +3,16 @@
     <div class="container">
       <div class="blog-details__banner" />
     </div>
-    <BlogDetails />
+    <ProjectDetails />
   </div>
 </template>
 
 <script>
-import BlogDetails from '../components/blocks/BlogDetails.vue'
+import ProjectDetails from '../blocks/ProjectDetails.vue'
 export default {
-  name: 'BlogDetailsView',
+  name: 'ProjectDetailsView',
   components: {
-    BlogDetails
+    ProjectDetails
   },
   data () {
     return {

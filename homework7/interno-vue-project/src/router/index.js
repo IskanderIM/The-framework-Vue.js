@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../components/views/HomeView.vue'
 // import BlogView from '../views/BlogView.vue'
 // import BlogDetailsView from '../views/BlogDetailsView.vue'
 Vue.use(VueRouter)
@@ -17,14 +17,20 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/BlogView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../components/views/BlogView.vue')
     // component: BlogView
   },
   {
     path: '/blog-details',
     name: 'blog-details',
-    component: () => import(/* webpackChunkName: "about" */ '../views/BlogDetailsView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../components/views/BlogDetailsView.vue')
     // component: BlogDetailsView
+  },
+  {
+    path: '/project-page',
+    name: 'project-page',
+    component: () => import(/* webpackChunkName: "about" */ '../components/views/ProjectView.vue')
+    // component: ProjectView
   }
 ]
 
