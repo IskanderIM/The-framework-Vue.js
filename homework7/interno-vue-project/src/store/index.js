@@ -11,6 +11,9 @@ export default new Vuex.Store({
   mutations: {
   },
   actions: {
+    // fetchDatta({ commit }) {
+    //   const
+    // }
   },
   modules: {
   }

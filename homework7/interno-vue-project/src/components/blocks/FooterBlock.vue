@@ -61,24 +61,24 @@
               Страницы
             </div>
             <div class="footer__interno_menu">
-              <a
-                href="#"
+              <router-link
+                to="/"
                 class="header__menu_link footer__interno_menu-link"
               >
                 Домой
-              </a>
-              <a
-                href="#"
+              </router-link>
+              <router-link
+                to="/project-page"
                 class="header__menu_link footer__interni_menu-link"
               >
                 Проект
-              </a>
-              <a
-                href="blog.html"
+              </router-link>
+              <router-link
+                to="/blog"
                 class="header__menu_link footer__interno_menu-link"
               >
                 Блог
-              </a>
+              </router-link>
             </div>
           </div>
           <div class="footer__interno_services" />

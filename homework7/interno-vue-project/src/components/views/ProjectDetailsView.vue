@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import ProjectDetails from '../blocks/ProjectDetails.vue'
+import ProjectDetails from '../blocks/ProjectBlock.vue'
 export default {
   name: 'ProjectDetailsView',
   components: {
