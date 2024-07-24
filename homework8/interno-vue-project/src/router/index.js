@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../components/views/HomeView.vue'
+import ErrorView from '@/components/views/ErrorView.vue'
 // import BlogView from '../views/BlogView.vue'
 // import BlogDetailsView from '../views/BlogDetailsView.vue'
 Vue.use(VueRouter)
@@ -31,11 +32,21 @@ const routes = [
     name: 'project-page',
     component: () => import(/* webpackChunkName: "about" */ '../components/views/ProjectView.vue')
     // component: ProjectView
+  },
+  {
+    path: '/404',
+    name: 'error',
+    component: ErrorView
+  },
+  {
+    path: '*',
+    redirect: '/404'
   }
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history'
 })
 
 export default router
