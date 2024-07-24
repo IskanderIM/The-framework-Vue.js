@@ -45,7 +45,7 @@
                     >
                   </div>
                 </div>
-                <div>
+                <div class="project-page__card-footer">
                   <div class="project-page__details-subcontentDate">
                     <div class="project-page__details-title">
                       {{ article.title }}
@@ -53,34 +53,34 @@
                     <div class="project-page__details-bradcrumbs">
                       {{ article.link }}
                     </div>
-                    <router-link
-                      to="/blog-details"
-                      class="project__contnet_block-link"
-                    >
-                      <svg
-                        width="52"
-                        height="53"
-                        viewBox="0 0 52 53"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <circle
-                          class="blog__blog_subcontent"
-                          cx="26"
-                          cy="26.2671"
-                          r="26"
-                          fill="#F4F0EC"
-                        />
-                        <path
-                          d="M23.7715 32.9529L29.7144 26.2672L23.7715 19.5815"
-                          stroke="#292F36"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </router-link>
                   </div>
+                  <router-link
+                    to="/blog-details"
+                    class="project__contnet_block-link"
+                  >
+                    <svg
+                      width="52"
+                      height="53"
+                      viewBox="0 0 52 53"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        class="blog__blog_subcontent"
+                        cx="26"
+                        cy="26.2671"
+                        r="26"
+                        fill="#F4F0EC"
+                      />
+                      <path
+                        d="M23.7715 32.9529L29.7144 26.2672L23.7715 19.5815"
+                        stroke="#292F36"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </router-link>
                 </div>
               </div>
               <!-- <div class="project-page__details-text">
@@ -171,8 +171,258 @@ export default {
   data () {
     return {
       sortedArray: [
+        // {
+        //   id: '1',
+        //   tag: 'kitchen',
+        //   title: 'Минималистичная спальня',
+        //   date: '26 Декабрь,2022',
+        //   link: 'Декор / Планировка',
+        //   firstpargth: 'В своей статье от 1994-го года журнал «Before & After» отследил фразу «Lorem ipsum ...» до философского трактата Цицерона О пределах добра и зла, написанного в 45 году до нашей эры на латинском языке. ',
+        //   secondpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   src: image1,
+        //   alt: 'photo',
+        //   quote: 'Какая-то умная и красивая цитата',
+        //   subtitle: 'Design sprints are great',
+        //   thirdpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   firstnumber: '1',
+        //   secondnumber: '2',
+        //   thirdnumber: '3',
+        //   fourthpargth: 'С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.',
+        //   secondsrc: image2
+        // },
+        // {
+        //   id: '2',
+        //   tag: 'kitchen',
+        //   title: 'Минималистичная спальня',
+        //   date: '26 Декабрь,2022',
+        //   link: 'Декор / Планировка',
+        //   firstpargth: 'В своей статье от 1994-го года журнал «Before & After» отследил фразу «Lorem ipsum ...» до философского трактата Цицерона О пределах добра и зла, написанного в 45 году до нашей эры на латинском языке. ',
+        //   secondpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   src: image2,
+        //   alt: 'photo',
+        //   quote: 'Какая-то умная и красивая цитата',
+        //   subtitle: 'Design sprints are great',
+        //   thirdpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   firstnumber: '1',
+        //   secondnumber: '2',
+        //   thirdnumber: '3',
+        //   fourthpargth: 'С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.',
+        //   secondsrc: image2
+        // },
+        // {
+        //   id: '3',
+        //   tag: 'kitchen',
+        //   title: 'Классическая спальня',
+        //   date: '26 Декабрь,2022',
+        //   link: 'Декор / Планировка',
+        //   firstpargth: 'В своей статье от 1994-го года журнал «Before & After» отследил фразу «Lorem ipsum ...» до философского трактата Цицерона О пределах добра и зла, написанного в 45 году до нашей эры на латинском языке. ',
+        //   secondpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   src: image3,
+        //   alt: 'photo',
+        //   quote: 'Какая-то умная и красивая цитата',
+        //   subtitle: 'Design sprints are great',
+        //   thirdpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   firstnumber: '1',
+        //   secondnumber: '2',
+        //   thirdnumber: '3',
+        //   fourthpargth: 'С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.',
+        //   secondsrc: image2
+        // },
+        // {
+        //   id: '4',
+        //   tag: 'kitchen',
+        //   title: 'Современная спальня',
+        //   date: '26 Декабрь,2022',
+        //   link: 'Декор / Планировка',
+        //   firstpargth: 'В своей статье от 1994-го года журнал «Before & After» отследил фразу «Lorem ipsum ...» до философского трактата Цицерона О пределах добра и зла, написанного в 45 году до нашей эры на латинском языке. ',
+        //   secondpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   src: image4,
+        //   alt: 'photo',
+        //   quote: 'Какая-то умная и красивая цитата',
+        //   subtitle: 'Design sprints are great',
+        //   thirdpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   firstnumber: '1',
+        //   secondnumber: '2',
+        //   thirdnumber: '3',
+        //   fourthpargth: 'С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.',
+        //   secondsrc: image2
+        // },
+        // {
+        //   id: '5',
+        //   tag: 'kitchen',
+        //   title: 'Минималистичный прикроватный столик',
+        //   date: '26 Декабрь,2022',
+        //   link: 'Декор / Планировка',
+        //   firstpargth: 'В своей статье от 1994-го года журнал «Before & After» отследил фразу «Lorem ipsum ...» до философского трактата Цицерона О пределах добра и зла, написанного в 45 году до нашей эры на латинском языке. ',
+        //   secondpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   src: image5,
+        //   alt: 'photo',
+        //   quote: 'Какая-то умная и красивая цитата',
+        //   subtitle: 'Design sprints are great',
+        //   thirdpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   firstnumber: '1',
+        //   secondnumber: '2',
+        //   thirdnumber: '3',
+        //   fourthpargth: 'С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.',
+        //   secondsrc: image2
+        // },
+        // {
+        //   id: '6',
+        //   tag: 'kitchen',
+        //   title: 'Столы и столики',
+        //   date: '26 Декабрь,2022',
+        //   link: 'Декор / Планировка',
+        //   firstpargth: 'В своей статье от 1994-го года журнал «Before & After» отследил фразу «Lorem ipsum ...» до философского трактата Цицерона О пределах добра и зла, написанного в 45 году до нашей эры на латинском языке. ',
+        //   secondpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   src: image6,
+        //   alt: 'photo',
+        //   quote: 'Какая-то умная и красивая цитата',
+        //   subtitle: 'Design sprints are great',
+        //   thirdpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   firstnumber: '1',
+        //   secondnumber: '2',
+        //   thirdnumber: '3',
+        //   fourthpargth: 'С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.',
+        //   secondsrc: image2
+        // },
+        // {
+        //   id: '7',
+        //   tag: 'kitchen',
+        //   title: 'Современная спальня',
+        //   date: '26 Декабрь,2022',
+        //   link: 'Декор / Планировка',
+        //   firstpargth: 'В своей статье от 1994-го года журнал «Before & After» отследил фразу «Lorem ipsum ...» до философского трактата Цицерона О пределах добра и зла, написанного в 45 году до нашей эры на латинском языке. ',
+        //   secondpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   src: image7,
+        //   alt: 'photo',
+        //   quote: 'Какая-то умная и красивая цитата',
+        //   subtitle: 'Design sprints are great',
+        //   thirdpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   firstnumber: '1',
+        //   secondnumber: '2',
+        //   thirdnumber: '3',
+        //   fourthpargth: 'С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.',
+        //   secondsrc: image2
+        // },
+        // {
+        //   id: '8',
+        //   tag: 'kitchen',
+        //   title: 'Современная спальня',
+        //   date: '26 Декабрь,2022',
+        //   link: 'Декор / Планировка',
+        //   firstpargth: 'В своей статье от 1994-го года журнал «Before & After» отследил фразу «Lorem ipsum ...» до философского трактата Цицерона О пределах добра и зла, написанного в 45 году до нашей эры на латинском языке. ',
+        //   secondpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   src: image8,
+        //   alt: 'photo',
+        //   quote: 'Какая-то умная и красивая цитата',
+        //   subtitle: 'Design sprints are great',
+        //   thirdpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   firstnumber: '1',
+        //   secondnumber: '2',
+        //   thirdnumber: '3',
+        //   fourthpargth: 'С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.',
+        //   secondsrc: image2
+        // },
+        // {
+        //   id: '9',
+        //   tag: 'kitchen',
+        //   title: 'Создадим лучший макет перепланировки',
+        //   date: '26 Декабрь,2022',
+        //   link: 'Интерьер / Домой / Декор',
+        //   firstpargth: 'В своей статье от 1994-го года журнал «Before & After» отследил фразу «Lorem ipsum ...» до философского трактата Цицерона О пределах добра и зла, написанного в 45 году до нашей эры на латинском языке. ',
+        //   secondpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   src: image1,
+        //   alt: 'photo',
+        //   quote: 'Какая-то умная и красивая цитата',
+        //   subtitle: 'Design sprints are great',
+        //   thirdpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   firstnumber: '1',
+        //   secondnumber: '2',
+        //   thirdnumber: '3',
+        //   fourthpargth: 'С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.',
+        //   secondsrc: image2
+        // },
+        // {
+        //   id: '10',
+        //   tag: 'bedroom',
+        //   title: 'Недорогие новейшие идеи дизайна интерьера.',
+        //   date: '22 Декабрь,2022',
+        //   link: 'Интерьер / Домой / Декор',
+        //   firstpargth: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don t look even slightly believable.',
+        //   secondpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   src: image5,
+        //   alt: 'photo',
+        //   quote: 'Какая-то умная и красивая цитата',
+        //   subtitle: 'Design sprints are great',
+        //   thirdpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   firstnumber: '1',
+        //   secondnumber: '2',
+        //   thirdnumber: '3',
+        //   fourthpargth: 'С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.',
+        //   secondsrc: image6
+        // },
+        // {
+        //   id: '11',
+        //   tag: 'building',
+        //   title: 'Здание, обычно крытое и имеющее стены сооружение, возводимое для постоянного использования.',
+        //   date: '20 Декабрь,2022',
+        //   link: 'Страна / Город / Здание',
+        //   firstpargth: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don t look even slightly believable.',
+        //   secondpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   src: image7,
+        //   alt: 'photo',
+        //   quote: 'Хорошие здания строят хорошие люди, а все проблемы решаются хорошим проектированием.',
+        //   subtitle: 'Мы формируем наши здания, а затем они формируют нас.',
+        //   thirdpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   firstnumber: '1',
+        //   secondnumber: '2',
+        //   thirdnumber: '3',
+        //   fourthpargth: 'С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.',
+        //   secondsrc: image8
+        // },
+        // {
+        //   id: '12',
+        //   tag: 'architecture',
+        //   title: 'В нашей статье подчеркивается важность планировки кухни для содействия соблюдению потребителями правил гигиены питания.',
+        //   date: '29 Декабрь,2022',
+        //   link: 'Страна / Город / Архитектура',
+        //   firstpargth: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don t look even slightly believable.',
+        //   secondpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   src: image8,
+        //   alt: 'photo',
+        //   quote: 'Архитектура — это визуальное искусство, и здания говорят сами за себя.',
+        //   subtitle: 'Архитектура со всего мира от современных архитекторов, включая ультрасовременные дома, небоскребы, культурные здания, отели, аэропорты, квартиры.',
+        //   thirdpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   firstnumber: '1',
+        //   secondnumber: '2',
+        //   thirdnumber: '3',
+        //   fourthpargth: 'С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.',
+        //   secondsrc: image6
+        // },
+        // {
+        //   id: '13',
+        //   tag: 'kitchen-planning',
+        //   title: 'Планировка кухни: выбор правильной планировки',
+        //   date: '25 Декабрь,2022',
+        //   link: 'Интерьер / Дом / Кухня',
+        //   firstpargth: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don t look even slightly believable.',
+        //   secondpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   src: image2,
+        //   alt: 'photo',
+        //   quote: 'Кухня — это сердце дома.',
+        //   subtitle: 'Кухни должны быть спроектированы с учетом того, что действительно важно — веселья, еды и жизни.',
+        //   thirdpargth: 'В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»',
+        //   firstnumber: '1',
+        //   secondnumber: '2',
+        //   thirdnumber: '3',
+        //   fourthpargth: 'С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.',
+        //   secondsrc: image3
+        // }
+      ],
+      articles: [
         {
-          id: 'kitchen',
+          id: '1',
+          tag: 'kitchen',
           title: 'Минималистичная спальня',
           date: '26 Декабрь,2022',
           link: 'Декор / Планировка',
@@ -190,7 +440,8 @@ export default {
           secondsrc: image2
         },
         {
-          id: 'kitchen',
+          id: '2',
+          tag: 'kitchen',
           title: 'Минималистичная спальня',
           date: '26 Декабрь,2022',
           link: 'Декор / Планировка',
@@ -208,7 +459,8 @@ export default {
           secondsrc: image2
         },
         {
-          id: 'kitchen',
+          id: '3',
+          tag: 'kitchen',
           title: 'Классическая спальня',
           date: '26 Декабрь,2022',
           link: 'Декор / Планировка',
@@ -226,7 +478,8 @@ export default {
           secondsrc: image2
         },
         {
-          id: 'kitchen',
+          id: '4',
+          tag: 'kitchen',
           title: 'Современная спальня',
           date: '26 Декабрь,2022',
           link: 'Декор / Планировка',
@@ -244,7 +497,8 @@ export default {
           secondsrc: image2
         },
         {
-          id: 'kitchen',
+          id: '5',
+          tag: 'kitchen',
           title: 'Минималистичный прикроватный столик',
           date: '26 Декабрь,2022',
           link: 'Декор / Планировка',
@@ -262,7 +516,8 @@ export default {
           secondsrc: image2
         },
         {
-          id: 'kitchen',
+          id: '6',
+          tag: 'kitchen',
           title: 'Столы и столики',
           date: '26 Декабрь,2022',
           link: 'Декор / Планировка',
@@ -280,7 +535,8 @@ export default {
           secondsrc: image2
         },
         {
-          id: 'kitchen',
+          id: '7',
+          tag: 'kitchen',
           title: 'Современная спальня',
           date: '26 Декабрь,2022',
           link: 'Декор / Планировка',
@@ -298,7 +554,8 @@ export default {
           secondsrc: image2
         },
         {
-          id: 'kitchen',
+          id: '8',
+          tag: 'kitchen',
           title: 'Современная спальня',
           date: '26 Декабрь,2022',
           link: 'Декор / Планировка',
@@ -314,11 +571,10 @@ export default {
           thirdnumber: '3',
           fourthpargth: 'С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.',
           secondsrc: image2
-        }
-      ],
-      articles: [
+        },
         {
-          id: 'kitchen',
+          id: '9',
+          tag: 'kitchen',
           title: 'Создадим лучший макет перепланировки',
           date: '26 Декабрь,2022',
           link: 'Интерьер / Домой / Декор',
@@ -336,7 +592,8 @@ export default {
           secondsrc: image2
         },
         {
-          id: 'bedroom',
+          id: '10',
+          tag: 'bedroom',
           title: 'Недорогие новейшие идеи дизайна интерьера.',
           date: '22 Декабрь,2022',
           link: 'Интерьер / Домой / Декор',
@@ -354,7 +611,8 @@ export default {
           secondsrc: image6
         },
         {
-          id: 'building',
+          id: '11',
+          tag: 'building',
           title: 'Здание, обычно крытое и имеющее стены сооружение, возводимое для постоянного использования.',
           date: '20 Декабрь,2022',
           link: 'Страна / Город / Здание',
@@ -372,7 +630,8 @@ export default {
           secondsrc: image8
         },
         {
-          id: 'architecture',
+          id: '12',
+          tag: 'architecture',
           title: 'В нашей статье подчеркивается важность планировки кухни для содействия соблюдению потребителями правил гигиены питания.',
           date: '29 Декабрь,2022',
           link: 'Страна / Город / Архитектура',
@@ -390,7 +649,8 @@ export default {
           secondsrc: image6
         },
         {
-          id: 'kitchen-planning',
+          id: '13',
+          tag: 'kitchen-planning',
           title: 'Планировка кухни: выбор правильной планировки',
           date: '25 Декабрь,2022',
           link: 'Интерьер / Дом / Кухня',
@@ -460,8 +720,13 @@ export default {
     //   divButton.classList.add('project-page__sidebar-button')
     // },
     filters (e) {
-      this.sortedArray = this.articles.filter(article => article.id === e.target.dataset.id)
+      // console.log(e.target.dataset.id)
+      this.sortedArray = this.articles.filter(articles => articles.tag === e.target.dataset.id)
     }
+  },
+
+  created () {
+    this.sortedArray = this.articles
   }
 }
 </script>

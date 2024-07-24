@@ -1219,6 +1219,12 @@ body {
       background: #C4C4C4;
       // background: url(../img/content/PhotoBlog1.png), lightgray 50% / cover no-repeat;
   }
+  &__card-footer {
+      display: flex;
+      align-items: center;
+      width: 585px;
+      justify-content: space-between;
+  }
   &__details-subcontentDate {
       display: flex;
       flex-direction: column;
