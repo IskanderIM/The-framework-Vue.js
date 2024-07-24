@@ -27,8 +27,8 @@
           </div>
         </div>
       </div>
-      <div class="project-page__blog-box">
-        <div
+      <b-card-group columns class="project-page__blog-box">
+        <b-card
           class="project-page__blog"
           v-for="article in sortedArray"
           :key="article.id"
@@ -45,12 +45,41 @@
                     >
                   </div>
                 </div>
-                <div class="project-page__details-subcontentDate">
-                  <div class="project-page__details-title">
-                    {{ article.title }}
-                  </div>
-                  <div class="project-page__details-bradcrumbs">
-                    {{ article.link }}
+                <div>
+                  <div class="project-page__details-subcontentDate">
+                    <div class="project-page__details-title">
+                      {{ article.title }}
+                    </div>
+                    <div class="project-page__details-bradcrumbs">
+                      {{ article.link }}
+                    </div>
+                    <router-link
+                      to="/blog-details"
+                      class="project__contnet_block-link"
+                    >
+                      <svg
+                        width="52"
+                        height="53"
+                        viewBox="0 0 52 53"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          class="blog__blog_subcontent"
+                          cx="26"
+                          cy="26.2671"
+                          r="26"
+                          fill="#F4F0EC"
+                        />
+                        <path
+                          d="M23.7715 32.9529L29.7144 26.2672L23.7715 19.5815"
+                          stroke="#292F36"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </router-link>
                   </div>
                 </div>
               </div>
@@ -121,8 +150,8 @@
               </div>
             </div>
           </div> -->
-        </div>
-      </div>
+        </b-card>
+      </b-card-group>
     </div>
   </div>
 </template>
