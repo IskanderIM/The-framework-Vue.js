@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Часть 2. Задание Vue**
+    Вы разрабатываете приложение для отображения и сортировки списка товаров. 
+    У вас есть массив объектов products, где каждый объект представляет товар с 
+    его названием и ценой. Вам необходимо отобразить список товаров и предоставить 
+    пользователю возможность сортировать товары по цене (по возрастанию и по убыванию). -->
+    <div id="app">
+        <h1>Список товаров</h1>
+        <label for="sort-select">Сортировка:</label>
+        <select id="sort-select" v-model="selected" >
+            <option disabled value="">Please select one</option>
+            <option v-bind:value="true">По возрастанию цены</option>
+            <option v-bind:value="false">По убыванию цены</option>
+        </select>
+        <p>{{ selected }}</p>
+        <ul id="product-list">
+            <li class="product-item" v-for="product in products" :key="product.id">Название: {{product.name}}; цена: {{product.price}};</li>            
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                selected: '',                
+                products: [
+                    {
+                        name: 'milk',
+                        price: 56,
+                    }, 
+                    {
+                        name: 'bread',
+                        price: 45,
+                    }, 
+                    {
+                        name: 'salt',
+                        price: 20,
+                    }, 
+                    {
+                        name: 'meat',
+                        price: 300,
+                    },
+                ],                
+            },
+            watch: {
+                selected: function(selected) {
+                    if (selected) {                        
+                        this.products.sort((a,b) => {                            
+                            return a.price - b.price;
+                        });
+                    } else if (!selected) {                        
+                        this.products.sort((a,b) => {                            
+                            return b.price - a.price;
+                        });
+                    } else {                       
+                    }                   
+                },
+            },
+            methods: {
+                
+             },
+            computed: {
+                
+            },
+        })
+    </script>
+</body>
+</html>
