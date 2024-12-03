@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+
 import image1 from '@/assets/img/content/Project/Project1.jpg'
 import image2 from '@/assets/img/content/Project/Project2.jpg'
 import image3 from '@/assets/img/content/Project/Project3.jpg'
@@ -9,6 +10,7 @@ import image5 from '@/assets/img/content/Project/Project5.jpg'
 import image6 from '@/assets/img/content/Project/Project6.jpg'
 import image7 from '@/assets/img/content/Project/Project7.jpg'
 import image8 from '@/assets/img/content/Project/Project8.jpg'
+
 
 Vue.use(Vuex)
 
