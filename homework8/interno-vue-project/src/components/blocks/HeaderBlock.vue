@@ -4,19 +4,16 @@
       <div class="header">
         <div class="header__left">
           <div class="header__left_block-logo">
-            <a href="index.html">
+            <router-link to="/">
               <img
                 src="../../assets/img/logos/Logo.png"
                 alt="Logo"
                 class="logo"
               >
-            </a>
-            <a
-              href="index.html"
-              class="siteName"
-            >
+            </router-link>
+            <router-link class="siteName" to="/">
               Interno
-            </a>
+            </router-link>
           </div>
         </div>
         <div class="header__right">

@@ -6,26 +6,23 @@
           <div class="footer__interno_interno">
             <div class="footer__interno_interno-subcontent">
               <div class="header__left_block-logo">
-                <a
-                  href="index.html"
-                >
+                <router-link to="/">
                   <img
                     src="../../assets/img/logos/Logo.png"
                     alt="Logo"
                     class="logo"
                   >
-                </a>
-                <a
-                  href="index.html"
+                </router-link>
+                <router-link to="/"
                   class="siteName"
                 >
                   Interno
-                </a>
+                </router-link>
               </div>
               <div class="footer__interno_interno-text">
               </div>
             </div>
-            <div class="social_links">
+            <div class="social-links">
               <div class="social__links-icons">
                 <svg
                   width="19"

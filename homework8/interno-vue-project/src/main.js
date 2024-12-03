@@ -7,7 +7,6 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 // Импорт CSS-файлов Bootstrap и BootstrapVue (порядок важен)
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-
 // Сделайте BootstrapVue доступным во всем проекте
 Vue.use(BootstrapVue)
 // При необходимости установите плагин компонентов значков BootstrapVue

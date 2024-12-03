@@ -32,7 +32,128 @@
         </div>
       </div>
     </div>
-    <HomeProjectCards/>
+    <div class="container">
+      <div class="project">
+        <div class="project__heading">
+          <h2 class="project__heading_title">
+            Следите за нашими проектами
+          </h2>
+          <div class="project__heading_subtitle">
+            Хорошо известно, что читатель будет отвлекаться на читабельный контент страницы
+          </div>
+        </div>
+        <div class="project__content">
+          <div class="project__content_block">
+            <div class="project__content_block-left">
+              <div class="project__content_block-img1" />
+              <div class="project__content_block-nav">
+                <div class="project__content_block-text">
+                  <div class="project__content_block-text_title">
+                    Современная кухня
+                  </div>
+                  <div class="project__content_block-text_subtitle">
+                    Декор / Планировка
+                  </div>
+                </div>
+                <div class="project__content_block-button">
+                  <a
+                    href="#"
+                    class="project__content_block-link"
+                  >
+                    <img
+                      src="../../assets/img/logos/_toRight.svg"
+                      alt="Go"
+                      class="project__content_block-imgButton"
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project__content_block-right">
+              <div class="project__content_block-img2" />
+              <div class="project__content_block-nav">
+                <div class="project__content_block-text">
+                  <div class="project__content_block-text_title">
+                    Современная кухня
+                  </div>
+                  <div class="project__content_block-text_subtitle">
+                    Декор / Планировка
+                  </div>
+                </div>
+                <div class="project__content_block-button">
+                  <a
+                    href="#"
+                    class="project__content_block-link"
+                  >
+                    <img
+                      src="../../assets/img/logos/_toRight.svg"
+                      alt="Go"
+                      class="project__content_block-imgButton"
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project__content_block">
+            <div class="project__content_block-left">
+              <div class="project__content_block-img3" />
+              <div class="project__content_block-nav">
+                <div class="project__content_block-text">
+                  <div class="project__content_block-text_title">
+                    Современная кухня
+                  </div>
+                  <div class="project__content_block-text_subtitle">
+                    Декор / Планировка
+                  </div>
+                </div>
+                <div class="project__content_block-button">
+                  <a
+                    href="#"
+                    class="project__content_block-link"
+                  >
+                    <img
+                      src="../../assets/img/logos/_toRight.svg"
+                      alt="Go"
+                      class="project__content_block-imgButton"
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project__content_block-right">
+              <div class="project__content_block-img4" />
+              <div class="project__content_block-nav">
+                <div class="project__content_block-text">
+                  <div class="project__content_block-text_title">
+                    Современная кухня
+                  </div>
+                  <div class="project__content_block-text_subtitle">
+                    Декор / Планировка
+                  </div>
+                </div>
+                <div class="project__content_block-button">
+                  <a
+                    href="#"
+                    class="project__content_block-link"
+                  >
+                    <img
+                      src="../../assets/img/logos/_toRight.svg"
+                      alt="Go"
+                      class="project__content_block-imgButton"
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container home-project-cards">
+      <div v-if="isLoading"><b-spinner label="Loading..."></b-spinner></div>
+      <ProjectCards v-else :articles="latestArticles" />
+    </div>
     <div class="container container__counter">
       <div class="counter">
         <div class="counter__counters">
@@ -299,15 +420,55 @@
 </template>
 
 <script>
-import HomeProjectCards from '../blocks/HomeProjectCards.vue'
+import { mapGetters, mapActions } from 'vuex'
+import ProjectCards from '../blocks/ProjectCards.vue'
 
 export default {
   name: 'HomeView',
-  components: {
-    HomeProjectCards
+  components: { ProjectCards },
+  data () {
+    return {
+      isLoading: true // Флаг загрузки
+    }
+  },
+  computed: {
+    ...mapGetters(['latestArticles'])
+  },
+  methods: {
+    ...mapActions(['fetchData'])
+  },
+  async mounted () {
+    try {
+      // Загружаем данные и отключаем флаг загрузки
+      await this.fetchData()
+    } catch (error) {
+      console.error('Ошибка загрузки статей:', error)
+    } finally {
+      this.isLoading = false
+    }
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+/* Стили применяются только для карточек внутри HomeView.vue */
+  .home-project-cards .project-page__details-img:nth-child(1) {
+    border-radius: 0px 80px 0px 0px;
+  }
+  .home-project-cards .project-page__blog-box .project-page__blog:nth-child(1) {
+    background-color: black;
+    border-radius: 0px 80px 0px 0px;
+  }
+
+  .home-project-cards .project-page__details-img:nth-child(2) {
+    border-radius: 80px 0px 0px 0px;
+  }
+
+  .home-project-cards .project-page__details-img:nth-child(3) {
+    border-radius: 0px 0px 80px 0px;
+  }
+
+  .home-project-cards .project-page__details-img:nth-child(4) {
+    border-radius: 0px 0px 0px 80px;
+  }
 </style>

@@ -30,7 +30,7 @@
                 </div>
                 <router-link
                   to="/blog-details"
-                  class="project__contnet_block-link"
+                  class="project__content_block-link"
                 >
                   <svg
                     width="52"

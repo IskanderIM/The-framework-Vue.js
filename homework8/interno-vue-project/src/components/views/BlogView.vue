@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div class="container container__banner">
       <div class="blogpage__banner">
         <div class="blogpage__banner-into">
           <h1 class="blogpage__banner-intoHead">
@@ -36,7 +36,7 @@
                   </div>
                   <router-link
                     to="/blog-details"
-                    class="project__contnet_block-link"
+                    class="project__content_block-link"
                   >
                     <svg
                       width="52"

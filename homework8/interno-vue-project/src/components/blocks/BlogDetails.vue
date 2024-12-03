@@ -6,10 +6,10 @@
         v-for="article in sortedArray"
         :key="article.id"
       >
-        <div class="blog-details__detais">
+        <div class="blog-details__details">
           <div class="blog-details__details-content">
             <div class="blog-details__details-subcontent">
-              <div class="blog-details__details-subSubcontent">
+              <div class="blog-details__details-sub-subcontent">
                 <div class="blog-details__details-title">
                   {{ article.title }}
                 </div>
@@ -25,7 +25,7 @@
                 <div class="blog-details__details-date">
                   {{ article.date }}
                 </div>
-                <div class="blog-details__details-bradcrumbs">
+                <div class="blog-details__details-breadcrumbs">
                   {{ article.link }}
                 </div>
               </div>
@@ -83,10 +83,10 @@
             </div>
           </div>
           <div class="blog-details__details-subcontent">
-            <div class="blog-details__details-subSubcontent">
+            <div class="blog-details__details-sub-subcontent">
               <div>
                 <img
-                  class="blog-details__details-subSubcontentImg"
+                  class="blog-details__details-sub-subcontentImg"
                   :src="article.secondsrc"
                   :alt="article.alt"
                 >
